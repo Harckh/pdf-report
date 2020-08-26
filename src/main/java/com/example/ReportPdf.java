@@ -5,30 +5,22 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.vandeseer.easytable.TableDrawer;
-import org.vandeseer.easytable.settings.BorderStyle;
-import org.vandeseer.easytable.settings.HorizontalAlignment;
-import org.vandeseer.easytable.settings.VerticalAlignment;
+import org.vandeseer.easytable.settings.*;
 import org.vandeseer.easytable.structure.Row;
 import org.vandeseer.easytable.structure.Table;
 import org.vandeseer.easytable.structure.Table.TableBuilder;
 import org.vandeseer.easytable.structure.cell.ImageCell;
 import org.vandeseer.easytable.structure.cell.TextCell;
 
-import static com.example.TestUtils.createGliderImage;
-import static com.example.TestUtils.createTuxImage;
 import static java.awt.Color.*;
 import static org.apache.pdfbox.pdmodel.font.PDType1Font.*;
-import static org.vandeseer.easytable.settings.HorizontalAlignment.CENTER;
-import static org.vandeseer.easytable.settings.HorizontalAlignment.LEFT;
-import static org.vandeseer.easytable.settings.HorizontalAlignment.RIGHT;
+import static org.vandeseer.easytable.settings.HorizontalAlignment.*;
 import static org.vandeseer.easytable.settings.VerticalAlignment.MIDDLE;
 import static org.vandeseer.easytable.settings.VerticalAlignment.TOP;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.io.File; 
 
 public class ReportPdf {
 
@@ -170,7 +162,7 @@ public class ReportPdf {
                     .startX(50f)
                     //Obtiene la altura de la pagina y establece el inicio del punto mayor menos 50
                     .startY(page.getMediaBox().getUpperRightY() - 50f)
-                    //establece el fin de la pagina, si el contenido es mayor se crea una nueva
+                    //establece el fin de la pagina, si el contenido es mayor se crea una nueva (NO FUNCIONA)
                     .endY(50F)
                     .table(table.build())
                     .build();
@@ -180,7 +172,7 @@ public class ReportPdf {
         }
 
         //Guarda los cambios del documento, por defecto en la raiz de la carpeta, se puede cambiar
-        document.save("example.pdf");
+        document.save("ReporteCalif.pdf");
         System.out.println("Generado con exito!");
 
 	}
