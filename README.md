@@ -2,7 +2,7 @@
 
 Generador de reportes en PDF orientado a calificaciones de control escolar, emplea pdfbox, easytable y pdfbox2-layout.
 
-# Dependencias
+### Dependencias
 
 El proyecto necesita de las siguientes dependencias:
 
