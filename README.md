@@ -16,4 +16,4 @@ El proyecto necesita de las siguientes dependencias:
 + [Tutorial PDFBox - Environment](https://www.tutorialspoint.com/pdfbox/pdfbox_environment.htm)
 
 
-+ [Repositorio easytable:](https://github.com/vandeseer/easytable)
++ [Repositorio easytable](https://github.com/vandeseer/easytable)
